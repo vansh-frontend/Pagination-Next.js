@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Next.js Server-side Pagination Demo
 
-## Getting Started
+A simple project demonstrating **Server-side Pagination** using **Next.js App Router** and **API Routes**.
 
-First, run the development server:
+## 📌 What We Built
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### ✅ Fake Database
+
+Created a `products.json` file to simulate a database containing product information.
+
+```
+src/data/products.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### ✅ API Route
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Created a Next.js API Route to handle pagination requests.
 
-## Learn More
+```
+src/app/api/products/route.js
+```
 
-To learn more about Next.js, take a look at the following resources:
+The API:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Reads `page` and `limit` from query parameters.
+- Calculates pagination indexes.
+- Retrieves products using `Array.slice()`.
+- Returns paginated data.
+- Returns pagination metadata.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### ✅ Pagination Logic
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Implemented backend pagination using:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `page`
+- `limit`
+- `startIndex`
+- `endIndex`
+- `Array.slice()`
+
+---
+
+### ✅ Pagination Metadata
+
+The API returns useful pagination information such as:
+
+- Current Page
+- Items Per Page
+- Total Products
+- Total Pages
+- Previous Page Availability
+- Next Page Availability
+
+---
+
+### ✅ API Testing
+
+Pagination can be tested directly from the browser.
+
+Example:
+
+```
+http://localhost:3000/api/products?page=1&limit=3
+```
+
+```
+http://localhost:3000/api/products?page=2&limit=3
+```
+
+---
+
+## 📂 Project Structure
+
+```
+src
+│
+├── app
+│   ├── api
+│   │   └── products
+│   │       └── route.js
+│   │
+│   ├── page.js
+│   └── globals.css
+│
+└── data
+    └── products.json
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js
+- React
+- JavaScript
+- Tailwind CSS
+- Next.js API Routes
+
+---
+
+## 🎯 Learning Outcome
+
+This project demonstrates how **Server-side Pagination** works by processing pagination on the backend instead of sending all records to the client.

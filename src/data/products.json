@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 16",
+    "price": 79999,
+    "category": "Mobiles",
+    "image": "https://picsum.photos/300?random=1"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S25",
+    "price": 74999,
+    "category": "Mobiles",
+    "image": "https://picsum.photos/300?random=2"
+  },
+  {
+    "id": 3,
+    "name": "MacBook Air M4",
+    "price": 109999,
+    "category": "Laptops",
+    "image": "https://picsum.photos/300?random=3"
+  },
+  {
+    "id": 4,
+    "name": "Dell XPS 14",
+    "price": 99999,
+    "category": "Laptops",
+    "image": "https://picsum.photos/300?random=4"
+  },
+  {
+    "id": 5,
+    "name": "Sony WH-1000XM5",
+    "price": 24999,
+    "category": "Audio",
+    "image": "https://picsum.photos/300?random=5"
+  },
+  {
+    "id": 6,
+    "name": "Apple Watch Series 10",
+    "price": 45999,
+    "category": "Wearables",
+    "image": "https://picsum.photos/300?random=6"
+  }
+]
